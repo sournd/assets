@@ -1,0 +1,186 @@
+{
+  "colour": {
+    "petrol": {
+      "$type": "color",
+      "$value": "#6BBCC6",
+      "$description": "THE primary accent: buttons, links, selection, focus, icon tile. Paper text on light; ink text on dark"
+    },
+    "petrol-deep": {
+      "$type": "color",
+      "$value": "#3A97A3",
+      "$description": "logo only (the s and nd)"
+    },
+    "raspberry": {
+      "$type": "color",
+      "$value": "#E0577F",
+      "$description": "secondary accent: controls, control buttons, live states, knob pointers, fader thumbs, playhead. Never fills a surface or marks status. Paper text on it"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "#A7B1B3",
+      "$description": "secondary text and labels"
+    },
+    "border-control": {
+      "$type": "color",
+      "$value": "#6F7B7E",
+      "$description": "1px control borders"
+    },
+    "divider": {
+      "$type": "color",
+      "$value": "#283235",
+      "$description": "dividers"
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "#141A1C"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "#EDF0EE"
+    },
+    "amber-text": {
+      "$type": "color",
+      "$value": "#F4A340"
+    },
+    "raspberry-text": {
+      "$type": "color",
+      "$value": "#EE8FA6"
+    }
+  },
+  "button": {
+    "primary": {
+      "rest": {
+        "$type": "color",
+        "$value": "#6BBCC6"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "#86CBD3"
+      },
+      "pressed": {
+        "$type": "color",
+        "$value": "#3A97A3"
+      },
+      "disabled-fill": {
+        "$type": "color",
+        "$value": "#2A3F43"
+      },
+      "disabled-text": {
+        "$type": "color",
+        "$value": "#6F8386"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#1D2226"
+      },
+      "focus-ring": {
+        "$type": "color",
+        "$value": "#EDF0EE"
+      }
+    },
+    "secondary": {
+      "border": {
+        "$type": "color",
+        "$value": "#6F7B7E"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#EDF0EE"
+      },
+      "hover-border": {
+        "$type": "color",
+        "$value": "#EDF0EE"
+      },
+      "hover-fill": {
+        "$type": "color",
+        "$value": "#1F292C"
+      },
+      "pressed-fill": {
+        "$type": "color",
+        "$value": "#283235"
+      },
+      "disabled-border": {
+        "$type": "color",
+        "$value": "#2F3A3D"
+      },
+      "disabled-text": {
+        "$type": "color",
+        "$value": "#5E6A6D"
+      },
+      "focus-ring": {
+        "$type": "color",
+        "$value": "#6BBCC6"
+      }
+    },
+    "control": {
+      "rest": {
+        "$type": "color",
+        "$value": "#E0577F"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "#E97396"
+      },
+      "pressed": {
+        "$type": "color",
+        "$value": "#9E1F4A"
+      },
+      "disabled-fill": {
+        "$type": "color",
+        "$value": "#4A2A34"
+      },
+      "disabled-text": {
+        "$type": "color",
+        "$value": "#8A6A74"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#F3F0EA"
+      },
+      "focus-ring": {
+        "$type": "color",
+        "$value": "#EDF0EE"
+      }
+    },
+    "highlight": {
+      "rest": {
+        "$type": "color",
+        "$value": "#F4A340"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "#F7B462"
+      },
+      "pressed": {
+        "$type": "color",
+        "$value": "#D3821F"
+      },
+      "disabled-fill": {
+        "$type": "color",
+        "$value": "#4A3A28"
+      },
+      "disabled-text": {
+        "$type": "color",
+        "$value": "#8A7A64"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#1D2226"
+      },
+      "focus-ring": {
+        "$type": "color",
+        "$value": "#EDF0EE"
+      }
+    }
+  },
+  "logo": {
+    "s-nd": {
+      "$type": "color",
+      "$value": "#3A97A3"
+    },
+    "OUR": {
+      "$type": "color",
+      "$value": "#6BBCC6"
+    }
+  }
+}

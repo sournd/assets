@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+tools/.venv/
+.build/
+.swiftpm/
+rust/target/
+rust/Cargo.lock
+*.egg-info/
+build/
+dist/
+__pycache__/

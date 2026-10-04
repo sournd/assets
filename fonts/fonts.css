@@ -1,0 +1,29 @@
+/* sournd fonts. Bricolage Grotesque 700 for the wordmark, display and headings;
+   Instrument Sans 400 body / 500 UI / 600 labels and values. No monospace.
+   Both SIL Open Font License 1.1 (OFL.txt beside each font). */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  font-display: swap;
+  src: url('bricolage-grotesque/BricolageGrotesque%5Bopsz,wdth,wght%5D.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 75% 100%;
+  font-display: swap;
+  src: url('instrument-sans/InstrumentSans%5Bwdth,wght%5D.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 75% 100%;
+  font-display: swap;
+  src: url('instrument-sans/InstrumentSans-Italic%5Bwdth,wght%5D.woff2') format('woff2');
+}

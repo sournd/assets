@@ -1,0 +1,17 @@
+{
+    "name": "sournd/assets",
+    "description": "sournd brand kit: wordmark, icon, favicons, colour and interface tokens, and fonts.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sournd\\Assets\\": "src/"
+        }
+    },
+    "archive": {
+        "exclude": ["/design", "/tools", "/fonts/mark"]
+    }
+}

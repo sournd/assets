@@ -1,0 +1,105 @@
+{
+  "colour": {
+    "paper": {
+      "$type": "color",
+      "$value": "#F3F0EA",
+      "$description": "light surface; text on petrol and raspberry buttons"
+    },
+    "ink": {
+      "$type": "color",
+      "$value": "#1D2226",
+      "$description": "light text; text on amber and on the dark-mode primary"
+    },
+    "night": {
+      "$type": "color",
+      "$value": "#141A1C",
+      "$description": "dark surface"
+    },
+    "chalk": {
+      "$type": "color",
+      "$value": "#EDF0EE",
+      "$description": "dark-mode text only, never an accent"
+    },
+    "amber": {
+      "$type": "color",
+      "$value": "#F4A340",
+      "$description": "highlights (new, picks), never a warning. Ink text on it"
+    }
+  },
+  "radius": {
+    "control": {
+      "$type": "dimension",
+      "$value": "6px"
+    },
+    "card": {
+      "$type": "dimension",
+      "$value": "10px"
+    },
+    "modal": {
+      "$type": "dimension",
+      "$value": "12px"
+    }
+  },
+  "height": {
+    "input": {
+      "$type": "dimension",
+      "$value": "40px"
+    },
+    "primary-action": {
+      "$type": "dimension",
+      "$value": "44px"
+    },
+    "small": {
+      "$type": "dimension",
+      "$value": "32px"
+    },
+    "chip": {
+      "$type": "dimension",
+      "$value": "28px"
+    }
+  },
+  "border": {
+    "control": {
+      "$type": "dimension",
+      "$value": "1px"
+    }
+  },
+  "focus": {
+    "ring": {
+      "$type": "dimension",
+      "$value": "2px"
+    },
+    "offset": {
+      "$type": "dimension",
+      "$value": "3px"
+    }
+  },
+  "font": {
+    "display": {
+      "$type": "fontFamily",
+      "$value": "Bricolage Grotesque"
+    },
+    "ui": {
+      "$type": "fontFamily",
+      "$value": "Instrument Sans"
+    }
+  },
+  "font-weight": {
+    "display": {
+      "$type": "fontWeight",
+      "$value": 700
+    },
+    "body": {
+      "$type": "fontWeight",
+      "$value": 400
+    },
+    "ui": {
+      "$type": "fontWeight",
+      "$value": 500
+    },
+    "label": {
+      "$type": "fontWeight",
+      "$value": 600
+    }
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<svg viewBox="0 0 1000 1000" width="{{ px }}" height="{{ px }}" style="display:block;flex:none" role="img" aria-label="sournd">
+<sc-if value="{{ tile }}" hint-placeholder-val="{{ true }}"><rect width="1000" height="1000" rx="224" fill="{{ bg }}"></rect></sc-if>
+{{ wall }}
+</svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:160,&quot;height&quot;:160},&quot;px&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:128,&quot;tsType&quot;:&quot;number&quot;},&quot;lvl&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;auto&quot;,&quot;full&quot;,&quot;small&quot;,&quot;tiny&quot;],&quot;default&quot;:&quot;auto&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;tile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;fg&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#F3F0EA&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;bg&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#3A97A3&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props, px = +(p.px ?? 128);
+    const lvl = p.lvl && p.lvl !== 'auto' ? p.lvl : (px < 20 ? 'tiny' : px <= 32 ? 'small' : 'full');
+    const tile = p.tile !== false && p.tile !== 'false';
+    const P = p.fg ?? '#F3F0EA', Q = p.bg ?? '#3A97A3', E = React.createElement;
+    const wall = [];
+    if (lvl === 'tiny') {
+      wall.push(E('rect', { key: 't', x: 150, y: 300, width: 700, height: 400, rx: 60, fill: 'none', stroke: P, strokeWidth: 70 }));
+    } else {
+      const small = lvl === 'small', sw = small ? 14 : 7, d = small ? 44 : 22, g = small ? 30 : 16;
+      const dashed = (key, x, y, w, h, r) => {
+        // one rounded-rect path; dash count fitted to perimeter so corners get a dash each
+        const L = 2 * (w + h) - 8 * r + 2 * Math.PI * r, n = Math.round(L / (d + g)), dd = L / n - g;
+        const p = 'M' + (x + r) + ' ' + y + 'h' + (w - 2 * r) + 'a' + r + ' ' + r + ' 0 0 1 ' + r + ' ' + r + 'v' + (h - 2 * r) + 'a' + r + ' ' + r + ' 0 0 1 -' + r + ' ' + r + 'h-' + (w - 2 * r) + 'a' + r + ' ' + r + ' 0 0 1 -' + r + ' -' + r + 'v-' + (h - 2 * r) + 'a' + r + ' ' + r + ' 0 0 1 ' + r + ' -' + r + 'z';
+        return E('path', { key, d: p, fill: 'none', stroke: P, strokeOpacity: 0.55, strokeWidth: sw, strokeLinecap: 'round', strokeDasharray: dd + ' ' + g, strokeDashoffset: -(r * Math.PI / 2 - dd) / 2 - (w - 2 * r) + dd / 2 });
+      };
+      const WX = 120, WW = 760, WH = 150, WG = 20, WY = 170, BW = 370, ow = small ? 18 : 10;
+      const terms = { '0,1': 'FUZZ', '1,1': 'COMP', '3,1': 'GATE' }, dials = '2,0', faders = '0,0', cursor = '2,1';
+      for (let r = 0; r < 4; r++) {
+        const off = r % 2 ? -(BW + WG) / 2 : 0;
+        for (let c = 0; c < 3; c++) {
+          const x = WX + off + c * (BW + WG), y = WY + r * (WH + WG);
+          const cx = Math.max(x, WX), w = Math.min(x + BW, WX + WW) - cx;
+          if (w < 60) continue;
+          const key = r + ',' + c, term = terms[key], my = y + WH / 2;
+          if (key === dials) {
+            wall.push(E('g', { key }, E('rect', { x: cx, y, width: w, height: WH, rx: 24, fill: P }),
+              E('circle', { cx: cx + 125, cy: my, r: 44, fill: Q }), E('circle', { cx: cx + 245, cy: my, r: 44, fill: Q }),
+              E('line', { x1: cx + 125, y1: my, x2: cx + 125 - 56 * Math.SQRT1_2, y2: my - 56 * Math.SQRT1_2, stroke: P, strokeWidth: 12, strokeLinecap: 'round' }),
+              E('line', { x1: cx + 245, y1: my, x2: cx + 245, y2: my - 56, stroke: P, strokeWidth: 12, strokeLinecap: 'round' })));
+            continue;
+          }
+          if (key === faders) {
+            const kids = [E('rect', { key: 'p', x: cx, y, width: w, height: WH, rx: 24, fill: P })];
+            [0.62, 0.3, 0.78].forEach((v, n) => { const fx = cx + 100 + n * 85, t0 = y + 30, tl = WH - 60; kids.push(E('rect', { key: 't' + n, x: fx - 6, y: t0, width: 12, height: tl, rx: 6, fill: Q })); kids.push(E('rect', { key: 'h' + n, x: fx - 24, y: t0 + tl * (1 - v) - 12, width: 48, height: 24, rx: 5, fill: Q })); });
+            wall.push(E('g', { key }, kids));
+            continue;
+          }
+          if (key === cursor) {
+            wall.push(E('g', { key }, E('rect', { x: cx + 5, y: y + 5, width: w - 10, height: WH - 10, rx: 22, fill: 'none', stroke: P, strokeWidth: ow }),
+              E('path', { d: 'M' + (cx + w / 2 - 70) + ' ' + (my - 40) + 'l52 32 -52 32', fill: 'none', stroke: P, strokeWidth: 16, strokeLinecap: 'round', strokeLinejoin: 'round' }),
+              E('rect', { x: cx + w / 2 + 2, y: my + 18, width: 58, height: 14, rx: 2, fill: P })));
+            continue;
+          }
+          if (term && w === BW) {
+            const kids = [E('rect', { key: 'o', x: cx + 5, y: y + 5, width: w - 10, height: WH - 10, rx: 22, fill: 'none', stroke: P, strokeWidth: ow })];
+            if (!small) kids.push(E('text', { key: 't', x: cx + w / 2, y: my + 20, textAnchor: 'middle', fill: P, fontFamily: "'JetBrains Mono',monospace", fontWeight: 700, fontSize: 56, style: { letterSpacing: 4 } }, term));
+            wall.push(E('g', { key }, kids));
+            continue;
+          }
+          wall.push(dashed(key, cx + 4, y + 4, w - 8, WH - 8, 22));
+        }
+      }
+    }
+    return { px, tile, bg: Q, wall: E('g', null, wall) };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "@sournd/assets",
+  "version": "0.1.0",
+  "private": true,
+  "description": "sournd brand kit: wordmark, icon, favicons, colour and interface tokens, and fonts.",
+  "license": "SEE LICENSE IN README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sournd/assets.git"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./tokens.json": "./tokens/tokens.json",
+    "./tokens.css": "./tokens/tokens.css",
+    "./fonts.css": "./fonts/fonts.css",
+    "./marks/*": "./marks/*",
+    "./web/*": "./web/*",
+    "./fonts/*": "./fonts/*"
+  },
+  "files": [
+    "README.md",
+    "CHANGELOG.md",
+    "index.js",
+    "tokens",
+    "marks",
+    "web",
+    "fonts/fonts.css",
+    "fonts/bricolage-grotesque",
+    "fonts/instrument-sans"
+  ],
+  "scripts": {
+    "check": "node index.js --check"
+  }
+}

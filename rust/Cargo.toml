@@ -1,0 +1,10 @@
+[package]
+name = "sournd-assets"
+version = "0.1.0"
+edition = "2021"
+description = "sournd brand kit: wordmark, icon, colour and interface tokens, and fonts, embedded."
+license-file = "../README.md"
+publish = false
+
+[lib]
+path = "src/lib.rs"

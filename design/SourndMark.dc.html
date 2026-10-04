@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'sourndMark';font-weight:700;src:url(https://fonts.gstatic.com/l/font?kit=3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpZJMnuECpwUxJBOm_OJWiaaD30YfKfjZZoLvfzlyMgvs-wIBtwkPl-qPgifoA&skey=7f69194495102d00&v=v9) format('woff2');font-display:block}
+</style>
+</helmet>
+<svg viewBox="{{ vb }}" style="height:{{ h }};width:auto;display:block;overflow:{{ ov }}" role="img" aria-label="sOURnd">
+<defs>
+<mask id="{{ mA }}" maskUnits="userSpaceOnUse" x="-200" y="-1000" width="4000" height="1300">
+<rect x="-200" y="-1000" width="4000" height="1300" fill="#fff"></rect>
+<g transform="translate(840,-330) rotate(40)"><rect x="-46" y="-430" width="92" height="270" fill="#000"></rect></g>
+<g transform="translate(2280.2,-120) rotate(-12.8)"><rect x="-95" y="0" width="190" height="170" fill="#000"></rect></g>
+</mask>
+<mask id="{{ mB }}" maskUnits="userSpaceOnUse" x="-200" y="-1000" width="4000" height="1300">
+<rect x="-200" y="-1000" width="4000" height="1300" fill="#fff"></rect>
+<rect x="1427" y="-446" width="110" height="12" fill="#000"></rect>
+</mask>
+</defs>
+<sc-if value="{{ guides }}" hint-placeholder-val="{{ false }}">
+<g stroke="#C9C3B8" stroke-width="3" fill="none">
+<line x1="-60" y1="-660" x2="3600" y2="-660"></line>
+<line x1="-60" y1="-539" x2="3600" y2="-539" stroke-dasharray="14 10"></line>
+<line x1="-60" y1="0" x2="3600" y2="0"></line>
+<line x1="-60" y1="-674" x2="1200" y2="-674" stroke-dasharray="4 8"></line>
+<line x1="-60" y1="14" x2="1200" y2="14" stroke-dasharray="4 8"></line>
+</g>
+<g font-family="JetBrains Mono, monospace" font-size="26" fill="#8A847A">
+<text x="3610" y="-652">cap 660</text><text x="3610" y="-531">x 539</text><text x="3610" y="8">baseline</text>
+</g>
+<g stroke="#E4572E" stroke-width="3" fill="none">
+<line x1="1540" y1="-660" x2="1540" y2="-600"></line><line x1="1540" y1="-175" x2="1540" y2="-115"></line>
+</g>
+<g font-family="JetBrains Mono, monospace" font-size="22" fill="#E4572E"><text x="1550" y="-622">60</text><text x="1550" y="-138">60</text></g>
+</sc-if>
+<g mask="url(#{{ mA }})" font-family="sourndMark, 'Bricolage Grotesque', sans-serif" font-weight="700" font-size="1000" style="font-variation-settings:'opsz' 96">
+<text x="0" y="0" fill="{{ text }}">s</text>
+<text x="510" y="0" fill="{{ ink }}">O</text>
+<text x="1170" y="0" fill="{{ ink }}">U</text>
+<text x="1795" y="0" fill="{{ ink }}">R</text>
+<text x="2426" y="0" fill="{{ text }}">n</text>
+<text x="2979" y="0" fill="{{ text }}">d</text>
+</g>
+<g fill="{{ detail }}">
+<g transform="translate(840,-330) rotate(40)"><rect x="-26" y="-348" width="52" height="253" rx="3"></rect></g>
+<g mask="url(#{{ mB }})">
+<rect x="1467" y="-600" width="30" height="106" rx="15"></rect>
+<rect x="1467" y="-386" width="30" height="211" rx="15"></rect>
+<rect x="1407" y="-472" width="150" height="64" rx="10"></rect>
+</g>
+</g>
+<g fill="{{ ink }}" transform="translate(2280.2,-120) rotate(-12.8)">
+<rect x="-64" y="19" width="128" height="50"></rect>
+<path d="M-45.5 88H45.5V114.5A45.5 45.5 0 0 1 -45.5 114.5Z"></path>
+</g>
+</svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1000,&quot;height&quot;:260},&quot;height&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;200px&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;color&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#1d1d1b&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;ink&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#1d1d1b&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;text&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#1d1d1b&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;detail&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#1d1d1b&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;guides&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  uid = Math.random().toString(36).slice(2, 8);
+  renderVals() {
+    const p = this.props, c = p.color ?? '#1d1d1b';
+    return {
+      vb: ({ o: '505 -730 690 780', r: '1800 -720 640 800' })[p.crop] ?? '0 -720 3540 800',
+      ov: p.crop ? 'hidden' : 'visible',
+      h: p.height ?? '200px', guides: !!p.guides,
+      text: p.text ?? c, ink: p.ink ?? c, detail: p.detail ?? p.ink ?? c,
+      mA: 'mA' + this.uid, mB: 'mB' + this.uid
+    };
+  }
+}
+</script>
+</body>
+</html>
