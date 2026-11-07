@@ -352,6 +352,8 @@ installing never runs a build. To change the brand, see [`tools/README.md`](tool
 
 ## Licences
 
-- **Wordmark, icon and product imagery:** all rights reserved. Use them unmodified to refer to
-  sournd.
+- **Name, wordmark and icon:** sOURnd and its wordmark and icon are unregistered trademarks of Box Of
+  Rules. Use them unmodified to refer to sOURnd. See [`LICENSE`](LICENSE).
+- **Tokens, documents and imagery:** copyright Box Of Rules, provided so you can build things that
+  work with sOURnd.
 - **Bricolage Grotesque and Instrument Sans:** SIL Open Font License 1.1 (`OFL.txt` beside each).

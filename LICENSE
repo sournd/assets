@@ -1,10 +1,17 @@
 sournd brand assets
 
-Copyright 2026 Box Of Rules. Some rights reserved as stated below.
+Copyright 2026 Box Of Rules.
 
-The sournd wordmark, icon, product imagery, tokens and documents in this repository are not
-licensed for reuse or redistribution. You may use the wordmark and icon, unmodified, to refer to
-sournd.
+Name and marks
+sOURnd, the sOURnd wordmark and the sOURnd icon are unregistered trademarks of Box Of Rules. You may
+use the wordmark and icon, unmodified, to refer to sOURnd. Please do not alter them, or use them in a
+way that suggests your product is made or endorsed by sOURnd.
 
-The fonts in fonts/ are third-party and are licensed under the SIL Open Font License 1.1. The
-licence text is in OFL.txt beside each font, and applies to those files only.
+Tokens, documents and imagery
+The colour and interface tokens, the documents and the other files here are provided so that you can
+build things that work with sOURnd. Please do not redistribute them as your own, or as a brand kit
+for another product.
+
+Fonts
+The fonts in fonts/ are third-party and are licensed under the SIL Open Font License 1.1. The licence
+text is in OFL.txt beside each font, and applies to those files only.
