@@ -140,6 +140,44 @@ favicon, dock, title bars. Lockup: icon and wordmark side by side.
 - Dark primary #6BBCC6 on night 9.4:1, ink text on it 11.9:1.
 - Raspberry as text on paper 7.4:1; on dark use #EE8FA6.
 
+## On night
+
+sournd.com and every sournd email are dark first. They sit on a darker night than the brand's own, so
+the petrol glows, and they use a few accent colours the paper brand does not. All of it is in
+`tokens.json` (`night`, `field`, `accent`) and in `tokens.css` as `--sournd-night-*`, `--sournd-cat-*`,
+`--sournd-tab-*`, `--sournd-email-*`, `--sournd-violet` and `--sournd-gold`.
+
+- **Surfaces:** page `#07080B`, second band `#0D1014`, panels `#12161B`, code and text on a lit chip
+  `#0B0E12`. Text is chalk, lede `#D7DCDC`, secondary text the dark muted. Hairlines are chalk at 12%
+  and 22%.
+- **The tile field:** rounded isometric tiles, one per engine, on a petrol blue glow that follows the
+  pointer: `#0C2A31` at the pointer, `#08161B` at 35%, `#07080B` at the edge.
+- **Headline gradient:** petrol `#6BBCC6`, amber `#F4A340` at 60%, raspberry `#E0577F`. Once a page.
+- **Category accents** (night only): distortion `#FF6A3D`, dynamics `#F4A340`, EQ `#FFD166`, filter
+  `#9BE564`, modulation `#6BBCC6`, delay `#7AA2FF`, reverb `#B388FF`, pitch `#E0577F`, performance
+  `#FF7AC6`, utility `#C3CBCD`, analysis `#5EE6C1`. They mark a section, never a button or a status.
+- **Tab colours**, in order, then repeat: `#6BBCC6`, `#F4A340`, `#E0577F`, `#B388FF`, `#9BE564`. The
+  active pill takes the code colour for its text.
+- **Violet** `#B388FF` is the fourth accent (reverb, chords, the email rule). **Gold** `#F2C14E` is the
+  played-instrument voice. Neither is a button.
+
+The rules above still hold: petrol is the one accent for actions, raspberry is what you touch.
+
+### Email
+
+One dark layout, 600px wide: the wordmark ([`marks/png/sournd-wordmark-dark-128.png`](marks/png/sournd-wordmark-dark-128.png),
+shown at 142 x 32), a card on `#0F1318` with a 1px `#232A31` border and 20px corners, and a 5px rule across
+its top running petrol, amber, raspberry, violet. The footer holds the tagline in Bricolage Grotesque 700, the
+mission line, a short petrol, amber, raspberry and violet rule, and small print in `#6E797C`.
+Inline every style, use solid colours where gradients are not drawn, and fall back to Avenir Next,
+Segoe UI and system sans. Headline 36/40 at -0.02em, body 16/26, kicker 12px uppercase in amber.
+
+### Social preview
+
+[`docs/social-preview.png`](docs/social-preview.png) is the 1280 x 640 share card for the site: icon and
+wordmark on night, the site tagline under them. [`docs/social-preview-light.png`](docs/social-preview-light.png)
+is the paper version, with the brand pack tagline.
+
 ## Buttons
 
 **On paper**
@@ -174,7 +212,8 @@ Instrument Sans 500 at 15px, 44px tall.
 | Labels | **Instrument Sans** | 600 | Uppercase, 0.08em tracking |
 | Values | **Instrument Sans** | 600 | Tabular figures where numbers line up |
 
-No monospace anywhere. Both faces are on Google Fonts and in Figma.
+No monospace anywhere. Both faces are on Google Fonts and in Figma. On night, headings stay Bricolage 700
+in chalk and labels are uppercase at 0.12em to 0.18em tracking.
 
 | File | |
 |---|---|
@@ -220,7 +259,7 @@ This kit is versioned on its own, in semver, and every release is tagged
 Every package reports the version it carries: `version` (npm), `Assets::VERSION` (PHP),
 `sournd_assets.__version__` (Python), `SourndAssets.version` (Swift), `sournd_assets::VERSION`
 (Rust), and `$version` in `tokens.json`. Install a release by its tag, for example
-`npm install github:sournd/assets#v0.1.0`.
+`npm install github:sournd/assets#v0.2.0`.
 
 ## Using the packages
 

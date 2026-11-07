@@ -4,6 +4,23 @@ The version is the brand kit's own, in semver. The **major version is the brand 
 new sournd brand ships as a new major version, so a product pins the major it was designed with.
 Minor versions add files, sizes or packages; patch versions fix files without changing the look.
 
+## 0.2.0 (7 Nov 2026)
+
+Brings the kit up to what sournd.com and its emails actually use. The look of the marks and the
+paper palette is unchanged.
+
+- Night-first tokens: page, panel, code and text-soft surfaces, hairlines, the petrol blue glow of
+  the tile field and the headline gradient (`night`, `field` in `tokens.json`).
+- Accents the site uses: violet, gold, the eleven effect category colours and the five tab colours
+  (`accent`).
+- Email brand: colours, widths, the four-colour rule, footer and the wordmark file to use.
+- New CSS custom properties `--sournd-night-*`, `--sournd-email-*`, `--sournd-cat-*`,
+  `--sournd-tab-*`, `--sournd-field-glow-*`, `--sournd-violet`, `--sournd-gold`; the same values in
+  the DTCG `core` set. Existing tokens are untouched.
+- Social preview redrawn on night with the site tagline; the paper version is kept as
+  `docs/social-preview-light.png`.
+- README: an On night section covering the above, plus type notes for night.
+
 ## 0.1.0 (4 Oct 2026)
 
 The first release of the sournd brand.

@@ -82,6 +82,21 @@ def build_tokens_css():
         "font-display": "'Bricolage Grotesque', sans-serif", "font-ui": "'Instrument Sans', sans-serif",
     }
 
+    # Night-first tokens (0.2.0): the same in every theme, for sournd.com and emails.
+    n, ac, fl = t["night"], t["accent"], t["field"]
+    for k in ("bg", "bg-2", "panel-solid", "code", "text-soft", "line", "line-strong"):
+        fixed[f"night-{k}"] = n[k]["value"]
+    for k, v in n["email"].items():
+        if isinstance(v, str) and v.startswith("#"):
+            fixed[f"email-{k}"] = v
+    fixed["violet"], fixed["gold"] = ac["violet"]["value"], ac["gold"]["value"]
+    for k, v in ac["categories"].items():
+        fixed[f"cat-{k}"] = v
+    for i, v in enumerate(ac["tabs"], 1):
+        fixed[f"tab-{i}"] = v
+    for i, g in enumerate(fl["glow"], 1):
+        fixed[f"field-glow-{i}"] = g["value"]
+
     def block(d):
         return "".join(f"  --sournd-{k}: {v};\n" for k, v in d.items())
 
@@ -126,6 +141,13 @@ def build_dtcg():
             "label": {"$type": "fontWeight", "$value": ty["label"]["weight"]},
         },
     }
+    n, ac, fl = t["night"], t["accent"], t["field"]
+    core["night"] = {k: col(n[k]["value"], n[k]["use"]) for k in ("bg", "bg-2", "panel-solid", "code", "text-soft")}
+    core["email"] = {k: col(v) for k, v in n["email"].items() if isinstance(v, str) and v.startswith("#")}
+    core["accent"] = {"violet": col(ac["violet"]["value"], ac["violet"]["use"]), "gold": col(ac["gold"]["value"], ac["gold"]["use"])}
+    core["category"] = {k: col(v, ac["categories-use"]) for k, v in ac["categories"].items()}
+    core["tab"] = {str(i): col(v, ac["tabs-use"]) for i, v in enumerate(ac["tabs"], 1)}
+    core["field-glow"] = {str(i): col(g["value"], fl["glow-use"]) for i, g in enumerate(fl["glow"], 1)}
     modes = {}
     for mode in ("light", "dark"):
         m = {"colour": {}, "button": {}}

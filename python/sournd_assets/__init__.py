@@ -11,7 +11,7 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
-__version__ = "0.1.0"  # brand kit version; the major version is the brand generation
+__version__ = "0.2.0"  # brand kit version; the major version is the brand generation
 
 _HERE = Path(__file__).resolve().parent
 # Installed wheel: the files sit inside the package. Repository checkout: they sit at the root.

@@ -9,7 +9,7 @@ import Foundation
 ///     SourndAssets.registerFonts()                       // Bricolage Grotesque + Instrument Sans
 public enum SourndAssets {
     /// Brand kit version (semver). The major version is the brand generation.
-    public static let version = "0.1.0"
+    public static let version = "0.2.0"
 
     public enum Theme: String { case light, dark }
     public enum IconCut: String { case full, small, tiny }

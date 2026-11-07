@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "sournd-assets"
-version = "0.1.0"
+version = "0.2.0"
 description = "sournd brand kit: wordmark, icon, favicons, colour and interface tokens, and fonts."
 readme = "README.md"
 requires-python = ">=3.9"

@@ -101,5 +101,183 @@
       "$type": "fontWeight",
       "$value": 600
     }
+  },
+  "night": {
+    "bg": {
+      "$type": "color",
+      "$value": "#07080B",
+      "$description": "page background, theme-color, email page"
+    },
+    "bg-2": {
+      "$type": "color",
+      "$value": "#0D1014",
+      "$description": "second band"
+    },
+    "panel-solid": {
+      "$type": "color",
+      "$value": "#12161B",
+      "$description": "cards and panels"
+    },
+    "code": {
+      "$type": "color",
+      "$value": "#0B0E12",
+      "$description": "code blocks, text on a lit accent chip"
+    },
+    "text-soft": {
+      "$type": "color",
+      "$value": "#D7DCDC",
+      "$description": "lede and intro text on night"
+    }
+  },
+  "email": {
+    "bg": {
+      "$type": "color",
+      "$value": "#07080B"
+    },
+    "card": {
+      "$type": "color",
+      "$value": "#0F1318"
+    },
+    "raised": {
+      "$type": "color",
+      "$value": "#161B21"
+    },
+    "line": {
+      "$type": "color",
+      "$value": "#232A31"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "#EDF0EE"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "#A7B1B3"
+    },
+    "faint": {
+      "$type": "color",
+      "$value": "#6E797C"
+    },
+    "link": {
+      "$type": "color",
+      "$value": "#6BBCC6"
+    },
+    "kicker": {
+      "$type": "color",
+      "$value": "#F4A340"
+    }
+  },
+  "accent": {
+    "violet": {
+      "$type": "color",
+      "$value": "#B388FF",
+      "$description": "fourth accent: email rule, reverb, chord and pad voices. Never a button"
+    },
+    "gold": {
+      "$type": "color",
+      "$value": "#F2C14E",
+      "$description": "the played-instrument voice (synths) in the playground. Not a button or status"
+    }
+  },
+  "category": {
+    "distortion": {
+      "$type": "color",
+      "$value": "#FF6A3D",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    },
+    "dynamics": {
+      "$type": "color",
+      "$value": "#F4A340",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    },
+    "eq": {
+      "$type": "color",
+      "$value": "#FFD166",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    },
+    "filter": {
+      "$type": "color",
+      "$value": "#9BE564",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    },
+    "modulation": {
+      "$type": "color",
+      "$value": "#6BBCC6",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    },
+    "delay": {
+      "$type": "color",
+      "$value": "#7AA2FF",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    },
+    "reverb": {
+      "$type": "color",
+      "$value": "#B388FF",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    },
+    "pitch": {
+      "$type": "color",
+      "$value": "#E0577F",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    },
+    "performance": {
+      "$type": "color",
+      "$value": "#FF7AC6",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    },
+    "utility": {
+      "$type": "color",
+      "$value": "#C3CBCD",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    },
+    "analysis": {
+      "$type": "color",
+      "$value": "#5EE6C1",
+      "$description": "Effect categories on night only: section rule, number, tile glow. Text on a filled chip is the code colour (#0B0E12)."
+    }
+  },
+  "tab": {
+    "1": {
+      "$type": "color",
+      "$value": "#6BBCC6",
+      "$description": "Tab dots and active pills cycle in this order, then repeat. Active pill text is the code colour."
+    },
+    "2": {
+      "$type": "color",
+      "$value": "#F4A340",
+      "$description": "Tab dots and active pills cycle in this order, then repeat. Active pill text is the code colour."
+    },
+    "3": {
+      "$type": "color",
+      "$value": "#E0577F",
+      "$description": "Tab dots and active pills cycle in this order, then repeat. Active pill text is the code colour."
+    },
+    "4": {
+      "$type": "color",
+      "$value": "#B388FF",
+      "$description": "Tab dots and active pills cycle in this order, then repeat. Active pill text is the code colour."
+    },
+    "5": {
+      "$type": "color",
+      "$value": "#9BE564",
+      "$description": "Tab dots and active pills cycle in this order, then repeat. Active pill text is the code colour."
+    }
+  },
+  "field-glow": {
+    "1": {
+      "$type": "color",
+      "$value": "#0C2A31",
+      "$description": "radial gradient centred on the pointer, radius the longer screen side"
+    },
+    "2": {
+      "$type": "color",
+      "$value": "#08161B",
+      "$description": "radial gradient centred on the pointer, radius the longer screen side"
+    },
+    "3": {
+      "$type": "color",
+      "$value": "#07080B",
+      "$description": "radial gradient centred on the pointer, radius the longer screen side"
+    }
   }
 }

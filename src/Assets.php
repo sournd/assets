@@ -13,7 +13,7 @@ namespace Sournd\Assets;
 final class Assets
 {
     /** Brand kit version (semver). The major version is the brand generation. */
-    public const VERSION = '0.1.0';
+    public const VERSION = '0.2.0';
 
     /** @var array<string, mixed>|null */
     private static ?array $tokens = null;
